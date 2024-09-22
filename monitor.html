@@ -22,7 +22,7 @@
 	   <script>
 		   const checkdevide = () => {
 		       const url = window.location.href;
-		       console.log("open page: ",url)
+		       console.log("open page: xxx",url)
 		       let userAgent = navigator.userAgent || navigator.vendor || window.opera;
 		       consonle.log("userAgent: ",userAgent")
 			// Huawei Phone must come first because its UA also contains "Android"
@@ -31,9 +31,9 @@
 				document.getElementById('showPlatform').innerText = 'IOS';
 				let redirectWindow = window.open('https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec', '_top');
 				redirectWindow.location;
-				}else{
-				const openiframepage = document.querySelectorAll('.iframepage');
-				openiframepage.classList.remove('d-none');					 
+			}else{
+			    const openiframepage = document.querySelectorAll('.iframepage');
+			    openiframepage.classList.remove('d-none');					 
 			}
 		   	console.log("xxyyzzaaa",window.location.href);
 		   }
