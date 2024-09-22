@@ -21,9 +21,11 @@
       <!-- <iframe src="https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec"></iframe> -->
 	   <script>
 		   const checkdevide = () => {
-		       console.log('pagecheck')
+		       console.log('pagecheck v.1')
 			   const url = window.location.href;
 		       console.log("open page: xxx",url)
+			   let userAgent = navigator.userAgent || navigator.vendor || window.opera;
+			   console.log("userAgent",userAgent)
 
 		   }
 		   checkdevide();
