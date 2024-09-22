@@ -22,6 +22,17 @@
 	   <script>
 		   const checkdevide = () => {
 		       console.log('pagecheck')
+			   const url = window.location.href;
+		       console.log("open page: xxx",url)
+		       let userAgent = navigator.userAgent || navigator.vendor || window.opera;
+		       consonle.log("userAgent: ",userAgent")
+			// Huawei Phone must come first because its UA also contains "Android"
+			if (userAgent.includes("iPhone")) {
+				// window.location.replace("https://apps.apple.com/us/app/telegram-messenger/id686449807");
+				document.getElementById('showPlatform').innerText = 'IOS';
+				let redirectWindow = 'https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec';
+				window.location.replace(newUrl);
+			}
 		   }
 		   checkdevide();
 		   
