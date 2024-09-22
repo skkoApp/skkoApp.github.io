@@ -19,7 +19,7 @@
    </head>
    <body>
       <!-- <iframe src="https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec"></iframe> -->
-	   <div class="">V.6</div>
+	   <div class="">V.6.1</div>
 	   <div class="older">OLD</div>
 	   <div id="showPlatform"> Active : </div>
 	   
@@ -43,8 +43,9 @@
 			      let redirectWindow = window.open('https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec', '_top');
 			      redirectWindow.location;
 			  } else {
+				   const checklassdivx = document.querySelectorAll('.older');
 			      document.getElementById('showPlatform').innerText = 'windows';
-				   checklassdiv.classList.add('d-none');
+				   checklassdivx.classList.add('d-none');
 				//let redirectWindow = window.open('https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec', '_top');
       				//redirectWindow.location;
 			  }
