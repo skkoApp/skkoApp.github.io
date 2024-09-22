@@ -5,6 +5,7 @@
       <base target="_top">
 	   <title>ระบบติดตามผลงาน</title>
 	   <link rel="icon" type="image/x-icon" href="https://peakWS.github.io/logo-bph.png">
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
       <style>
         iframe {
             position: absolute;
@@ -17,13 +18,27 @@
       </style>
    </head>
    <body>
-      <iframe src="https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec"></iframe>
+      <iframe class="d-none" src="https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec"></iframe>
 	   <script>
-		   console.log("xxyyzzaaa",window.location.href)
 		   const checkdevide = () => {
-			   console.log("function checkdevide")
+		       const url = window.location.href;
+		       console.log("open page: ",url)
+		       let userAgent = navigator.userAgent || navigator.vendor || window.opera;
+		       consonle.log("userAgent: ",userAgent")
+			// Huawei Phone must come first because its UA also contains "Android"
+			if (userAgent.includes("iPhone")) {
+				// window.location.replace("https://apps.apple.com/us/app/telegram-messenger/id686449807");
+				document.getElementById('showPlatform').innerText = 'IOS';
+				let redirectWindow = window.open('https://script.google.com/macros/s/AKfycbxGXcsx5C4LLdM0J4YvUZdNaWDWrzOGhgO52wFq8OlqARU3zTh3nYmmAu5KNN1UPz7beA/exec', '_top');
+				redirectWindow.location;
+				}else{
+				const openiframepage = document.querySelector('iframe');
+				openiframepage.classList.remove('d-none');					 
+			}
+		   	console.log("xxyyzzaaa",window.location.href);
 		   }
-		   checkdevide()
+		   checkdevide();
 	   </script>
+	   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    </body>
 </html>
